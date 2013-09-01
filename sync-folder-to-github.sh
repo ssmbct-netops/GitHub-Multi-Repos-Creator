@@ -34,12 +34,16 @@ git remote add origin git@github.com:$USER/$REPO.git
 git push origin master
 else
 if [ ! -f "README.md" ]; then
+echo "no README.md found."
 # Uncomment to generate README.md for each new repo who don't have README.md file
+#echo "generating README.md..."
 #echo "$REPO"  > README.md 
 #echo "========" >> README.md
 fi;
 if [ ! -f "LICENSE" ]; then
+echo "no LICENSE found."
 # Uncomment to download GPL3 LICENSE for each new repo who don't have LICENSE file
+#echo "download GPL3 LICENSE..."
 #wget http://www.gnu.org/licenses/gpl.txt
 #mv gpl.txt LICENSE
 fi;
