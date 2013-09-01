@@ -39,4 +39,6 @@ git remote add origin git@github.com:$USER/$REPO.git
 git add .
 git commit -a -m "Initial commit"
 git push origin master
+git tag -a 1.0 -m 'verion 1.0'
+git push origin master --tags
 fi
