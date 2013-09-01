@@ -33,12 +33,25 @@ echo "Syncing exist git"
 git remote add origin git@github.com:$USER/$REPO.git
 git push origin master
 else
+if [ ! -f "README.md" ]; then
+# Uncomment to generate README.md for each new repo who don't have README.md file
+#echo "$REPO"  > README.md 
+#echo "========" >> README.md
+fi;
+if [ ! -f "LICENSE" ]; then
+# Uncomment to download GPL3 LICENSE for each new repo who don't have LICENSE file
+#wget http://www.gnu.org/licenses/gpl.txt
+#mv gpl.txt LICENSE
+fi;
 echo "Creating new git and syncing"
 git init
 git remote add origin git@github.com:$USER/$REPO.git
 git add .
 git commit -a -m "Initial commit"
 git push origin master
-git tag -a 1.0 -m 'verion 1.0'
-git push origin master --tags
+
+# uncomment to set tag for all the folders
+#git tag -a 1.0 -m 'verion 1.0'
+#git push origin master --tags
+
 fi
