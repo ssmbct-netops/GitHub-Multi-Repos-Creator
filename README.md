@@ -15,5 +15,6 @@ One repo for each subfolder.
 - FOLDER="" # create repos from this folder subfolders - for example "/temp"
 
 
-by [RaveMaker][RaveMaker].
+by [RaveMaker][RaveMaker] & [ET][ET].
 [RaveMaker]: http://ravemaker.net
+[ET]: http://etcs.me
