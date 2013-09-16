@@ -1,0 +1,9 @@
+# --------------------------------------------------------
+# Create settings.cfg and updated your settings
+# --------------------------------------------------------
+
+# Settings
+USER="ET-CS"
+FOLDER="/temp"
+
+sh sync-tree-to-github.sh $FOLDER $USER
