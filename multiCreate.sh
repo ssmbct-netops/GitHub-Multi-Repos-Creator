@@ -1,24 +1,8 @@
 #!/bin/bash
 
-# This bash script name
-ME=`basename $0`
-# Folder
-FOLDER=$1
-# GitHub User
-USER=$2
-
-if [ -z "$USER" ] || [ -z "$FOLDER" ];
-then
-    echo
-    echo "Usage: sh "$ME" <FOLDER> <USER>"
-    echo "example: sh "$ME" /my_folder UserName"
-    echo
-exit
-fi;
-
 # This function sync folders to repositories at GitHub using parameters - FOLDER & USER.
 function sync-tree-to-github ()
-}
+{
     for SUBFOLDER in $(find $FOLDER -maxdepth 1 -type d)
     do
 	if [ ! $SUBFOLDER = $FOLDER ]; then
@@ -96,6 +80,18 @@ if [ -f settings.cfg ] ; then
 else
     echo "ERROR: Create settings.cfg (from settings.cfg.example)"
     exit
+fi;
+
+# This bash script name
+ME=`basename $0`
+
+if [ -z "$USER" ] || [ -z "$FOLDER" ];
+then
+    echo
+    echo "Usage: sh "$ME" <FOLDER> <USER>"
+    echo "example: sh "$ME" /my_folder UserName"
+    echo
+exit
 fi;
 
 sync-tree-to-github $FOLDER $USER

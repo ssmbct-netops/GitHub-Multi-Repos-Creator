@@ -3,5 +3,9 @@
 # --------------------------------------------------------
 
 # Settings
-USER="ET-CS"
-FOLDER="/temp"
+
+# case sensetive - for example "UserName"
+USER=""
+
+# create repos from this folder subfolders - for example "/temp"
+FOLDER=""
