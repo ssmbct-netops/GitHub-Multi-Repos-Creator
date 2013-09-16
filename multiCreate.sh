@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # This bash script name
 ME=`basename $0`
 # Folder
