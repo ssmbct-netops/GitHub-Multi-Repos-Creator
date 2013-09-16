@@ -73,25 +73,32 @@ JSON='{"name":"'$REPO'"}'
 curl -u $USER https://api.github.com/user/repos -d $JSON
 }
 
-# Load settings
+##### BODY ###########
+
+# Clear settings
+FOLDER=""
+USER=""
+
+# Load settings.cfg
 if [ -f settings.cfg ] ; then
     echo "Loading settings..."
     source settings.cfg
-else
-    echo "ERROR: Create settings.cfg (from settings.cfg.example)"
-    exit
 fi;
 
-# This bash script name
+echo ""
+
+while [ -z "$USER" -o -z "$FOLDER" ]; do
+    if [ -z "$USER" ]; then
+	echo -n "Input GitHub user name:"
+	read USER
+    fi
+    if [ -z "$FOLDER" ]; then
+	echo -n "Input folder to scan and create repos:"
+	read FOLDER
+    fi
+done
+
+# This bash script file name
 ME=`basename $0`
-
-if [ -z "$USER" ] || [ -z "$FOLDER" ];
-then
-    echo
-    echo "Usage: sh "$ME" <FOLDER> <USER>"
-    echo "example: sh "$ME" /my_folder UserName"
-    echo
-exit
-fi;
 
 sync-tree-to-github $FOLDER $USER
