@@ -89,11 +89,11 @@ echo ""
 
 while [ -z "$USER" -o -z "$FOLDER" ]; do
     if [ -z "$USER" ]; then
-	echo -n "Input GitHub user name:"
+	echo -n "Input GitHub user name: "
 	read USER
     fi
     if [ -z "$FOLDER" ]; then
-	echo -n "Input folder to scan and create repos:"
+	echo -n "Input folder to scan and create repos: "
 	read FOLDER
     fi
 done
