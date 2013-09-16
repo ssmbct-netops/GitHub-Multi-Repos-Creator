@@ -11,7 +11,7 @@ One repo for each subfolder.
 
 2. Create settings.cfg from settings.cfg.example and change:
 
-- USER="" # case sensetive - for example "UserName"
+- USER="" # case sensitive - for example "UserName"
 - FOLDER="" # create repos from this folder subfolders - for example "/temp"
 
 

@@ -4,7 +4,7 @@
 
 # Settings
 
-# case sensetive - for example "UserName"
+# case sensitive - for example "UserName"
 USER=""
 
 # create repos from this folder subfolders - for example "/temp"
