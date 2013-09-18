@@ -9,8 +9,9 @@ One repo for each subfolder.
 
 1. Clone this script from github or copy the files manually to your prefered directory.
 
+###### You can run the script with switches: multiCreate.sh User /folder
 
-Optional step to use without user interaction :
+### Optional step to use without user interaction :
 
 1. You can create settings.cfg from settings.cfg.example and change:
 
