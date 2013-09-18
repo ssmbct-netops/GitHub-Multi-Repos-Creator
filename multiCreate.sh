@@ -75,9 +75,9 @@ curl -u $USER https://api.github.com/user/repos -d $JSON
 
 ##### BODY ###########
 
-# Clear settings
-FOLDER=""
-USER=""
+# Get Settings from script command
+FOLDER="$1"
+USER="$2"
 
 # Load settings.cfg
 if [ -f settings.cfg ] ; then
