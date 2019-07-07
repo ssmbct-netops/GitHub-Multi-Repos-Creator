@@ -21,6 +21,7 @@ One repo for each subfolder.
 ##### Without settings.cfg the script will ask for your User Name and destination Folder.
 
 
-by [RaveMaker][RaveMaker] & [ET][ET].
+Authors: [RaveMaker][RaveMaker] & [ET][ET].
+
 [RaveMaker]: http://ravemaker.net
 [ET]: http://etcs.me
